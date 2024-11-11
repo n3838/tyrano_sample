@@ -1,46 +1,68 @@
 *start
 
-[title name="走るか寝るかするメロス"]
+[title name="金の斧銀の斧"]
 [hidemenubutton]
 [wait time=200]
 [freeimage layer="base"]
+[bg storage=mizuumi.png time=500]
 
-「走るか寝るかするメロス」[l][r]
+「金の斧銀の斧」[l][r]
 
-メロスは激怒した。[l][r]
+むかしむかしの　おはなしです。[l][r]
 
-必ず、かの邪智暴虐の王を除かねばならぬと決意した。[l][r]
+あるところに　まじめな　きこりが　いました。[l][r]
 
 (中略)[l][r]
 
-ああ、何もかも、ばかばかしい。私は、醜い裏切り者だ。どうとも、勝手にするがよい。やんぬる哉。[l][r]
-メロスは...[l][r]
+きょうも　てつの　おので　きを　きります。[l][r]
+こーん、こーん。[l][r]
+きもちの　よい　おとが　もりに　ひびきました。[l][r]
+ところが　てが　つるりと　すべって、[l][r]
+ぽちゃん！[l][r]
+おのが　いずみに　おちて　しまいました。[l][r]
+すると、ぼこ　ぼこ　ぼこ。[l][r]
+いずみの　なかから　うつくしい　めがみさまが　あらわれました。[l][r]
+[cm]
 
-[link target=*tag_sleep] →寝る [endlink][r]
-[link target=*tag_run] →走る [endlink][r]
+[chara_new name="God"  fg storage=GOD.png ]
+[chara_show name="God" height=750]
+
+「あなたが　おとしたのは　きんの　おのですか？それとも、ぎんの　おのですか？」[l][r]
+
+[link target=*tag_gold] →きんのおの [endlink][r]
+[link target=*tag_silver] →ぎんのおの [endlink][r]
+[link target=*tag_no] →いいえどちらでもありません [endlink][r]
 [s]
 
-*tag_sleep
+*tag_gold
 
 [cm]
 
-[bg storage=sleep.jpg time=500]
+[bg storage=text_gameover_e.png time=500]
 
-メロスは死んだように深く眠った。[l][r]
-勇者は、ひどく赤面した。[r]
+あんたはなにもえることができなかった。[l][r]
 
 【 BAD END 】[l][cm]
+[chara_hide name="God" ]
 
 [jump target=*start]
 
-*tag_run
+*tag_silver
 
-[bg storage=run.jpg time=500]
 
 [cm]
-メロスは黒い風のように走った。[l][r]
-陽は、ゆらゆら地平線に没し、まさに最後の一片の残光も、消えようとした時、メロスは疾風の如く刑場に突入した。間に合った。[r]
+[bg storage=text_gameover_e.png time=500]
+あんたはなにもえることができなかった。[l][r]
 
+【 BAD END 】[l][cm]
+[chara_hide name="God" ]
+[jump target=*start]
+*tag_no
+[cm]
+[bg storage=text_gameclear_j.png time=500]
+
+
+あなたはすべてのおのをてにいれた！[l][r]
 【 GOOD END 】[l][cm]
-
+[chara_hide name="God" ]
 [jump target=*start]
